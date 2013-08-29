@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <h1>Test</h1>
+
+		<!-- real scripts -->
+    <%- bundee.js('/js/a.js', '/js/b.js') %> 
+
+		<!-- visible html -->
+    <pre><%= bundee.js('/js/a.js', '/js/b.js') %></pre>
+
+  </body>
+</html>
