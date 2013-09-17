@@ -1,11 +1,11 @@
 
 var express = require('express')
-  , http = require('http')
+  , http = require('http') 
   , path = require('path');
 
 var app = express();
 
-GLOBAL.bundee = require('bundee')(app, { debug: false });
+require('bundee')(app, { debug: false });
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

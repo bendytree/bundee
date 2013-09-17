@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html>   
   <head>
     <title>Test</title>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   </head>
   <body>
-    <h1>Test</h1>
 
 		<!-- real scripts -->
-    <%- bundee.js('/js/a.js', '/js/b.js') %> 
+    <%- bundee.js('https://gist.github.com/cowboy/661855/raw/928bb70ccabd18fe0089d50ea5dba101c0ebe1ef/jquery.ba-tinypubsub.js', '/js/a.js', '/js/b.js') %> 
+    <h2>JS:</h2>
+    <pre id='js' class='code'></pre>
 
-		<!-- visible html -->
-    <pre><%= bundee.js('/js/a.js', '/js/b.js') %></pre>
+    <%- bundee.css('/css/styles.css', '/css/importer.css', '/css/images.css') %>
+    <h2>CSS:</h2>
+    <pre id='css' class='code'></pre>
+
+    <script>
+      $(function(){
+	      var $css = $("#css");
+	      $css.load($css.prevAll('link').attr('href'));
+	
+	      var $js = $("#js");
+	      $js.load($js.prevAll('script').attr('src'));
+			});
+    </script>
 
   </body>
 </html>

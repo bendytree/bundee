@@ -1,0 +1,12 @@
+
+body {
+  background-color:#EEE;
+  font-family:sans-serif;
+  margin:20px;
+}
+
+.code {
+  border:solid 1px #DDD;
+  background-color:#FFF;
+  padding:10px;
+}
