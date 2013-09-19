@@ -5,7 +5,7 @@ var express = require('express')
 
 var app = express();
 
-require('../index')(app, { debug: false });
+require('../lib/index')(app, { debug: false });
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

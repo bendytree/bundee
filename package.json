@@ -8,6 +8,7 @@
     "async": "~0.2.9",
     "request": "~2.27.0",
     "uglify-js": "~2.4.0",
-    "clean-css": "~1.0.12"
+    "clean-css": "~1.0.12",
+    "express": "~3.4.0"
   }
 }
